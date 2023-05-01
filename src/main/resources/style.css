@@ -1,0 +1,73 @@
+.button
+{
+-fx-background-color : #05071F;
+-fx-text-fill : #e7e5e5;
+}
+.button:hover{
+-fx-background-color : #10165F;
+}
+.button:pressed
+{
+-fx-background-color : #1620A1;
+}
+
+.scroll-pane {
+    -fx-background-color: #02030A;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #10165F;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: black;
+}
+.my-table-row:odd {
+    -fx-background-color: #f5f5f5;
+}
+
+.my-table-row:hover {
+    -fx-background-color: #ececec;
+}
+
+.my-table-row:even:focused, .my-table-row:odd:focused {
+    -fx-background-color: #d4d4d4;
+}
+/* Стиль для таблицы */
+.table-view {
+    -fx-background-color: #2a0258;
+}
+
+/* Стиль для каждой строки таблицы */
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e7e5e5;
+}
+
+/* Стиль для каждой четной строки таблицы */
+.table-row-cell:even {
+    -fx-background-color: #332a5f;
+}
+
+/* Стиль для строки, над которой находится курсор мыши */
+.table-row-cell:hover {
+    -fx-background-color: #554a85;
+}
