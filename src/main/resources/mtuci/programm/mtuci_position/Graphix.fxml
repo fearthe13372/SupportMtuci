@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1486.0" prefWidth="1173.0" style="-fx-background-color: #2a0258;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mtuci.programm.mtuci_position.ControllerGraphix">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1173.0" style="-fx-background-color: #2a0258;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mtuci.programm.mtuci_position.ControllerGraphix">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -169,7 +169,7 @@
                         </VBox>
                      </children>
                   </HBox>
-                  <TabPane layoutX="14.0" layoutY="257.0" prefHeight="1218.0" prefWidth="869.0" style="-fx-background-color: #2a0258;" tabClosingPolicy="UNAVAILABLE">
+                  <TabPane layoutX="14.0" layoutY="257.0" prefHeight="481.0" prefWidth="869.0" style="-fx-background-color: #2a0258;" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                       <Tab text="Позиция">
                         <content>
@@ -309,7 +309,7 @@
                                                 </Label>
                                              </children>
                                           </VBox>
-                                          <TableView fx:id="table" layoutX="-1.0" layoutY="809.0" prefHeight="302.0" prefWidth="885.0" style="-fx-background-color: #2a0258;">
+                                          <TableView fx:id="tablePosition" layoutX="-1.0" layoutY="809.0" prefHeight="302.0" prefWidth="885.0" style="-fx-background-color: #2a0258;">
                                             <columns>
                                               <TableColumn fx:id="indicator" prefWidth="51.199981689453125" style="-fx-background-color: b7a5c5;" text="Е№" />
                                                 <TableColumn fx:id="year2018" prefWidth="74.4000244140625" style="-fx-background-color: b7a5c5;" text="2018" />
@@ -330,11 +330,11 @@
                       </Tab>
                         <Tab text="Образ. Деят.">
                            <content>
-                              <ScrollPane prefHeight="619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                              <ScrollPane prefHeight="1907.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
                                  <content>
-                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="1176.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
                                        <children>
-                                          <VBox prefHeight="809.0" prefWidth="865.0">
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
                                              <children>
                                                 <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Образовательная деятельность" textFill="#e7e5e5">
                                                    <font>
@@ -366,27 +366,22 @@
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.." textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2. Средний балл ЕГЭ студентов университета, принятых по результатам ЕГЭ на обучение " textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      E.2. Научно-исследовательская деятельность -Объем НИОКР в расчете на одного " textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по очной форме по программам бакалавриата и специалитета за счет средств соответствующих" textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      научно-педагогического работника, за исключением ППС из числа работников предприятий " textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бюджетов бюджетной системы Российской Федерации, за исключением лиц, поступивших с " textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      и организаций (кроме образовательных), привлеченных к образовательной деятельности по" textFill="#e7e5e5">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      реализации образовательных программ бакалавриата, специалитета, магистратуры." textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      учетом особых прав и в рамках квоты целевого приема." textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
@@ -396,32 +391,17 @@
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      E.3. Международная деятельность - Удельный вес численности иностранных студентов," textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3. Средний балл ЕГЭ студентов, принятых по результатам ЕГЭ на обучение по очной форме" textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      обучающихся по программам бакалавриата, специалитета, магистратуры, в общей численности " textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по программам бакалавриата и специалитета с оплатой стоимости затрат на обучение " textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      студентов (приведенный контингент)." textFill="#e7e5e5">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      E.4. Финансово-экономическая деятельность - Доходы образовательной организации из всех" textFill="#e7e5e5">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      источников в расчете на одного НПР." textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      физическими и юридическими лицами." textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
@@ -431,12 +411,17 @@
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      E.5. Заработная плата ППС - Отношение заработной платы профессорско-преподавательского" textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.4. Усредненный по реализуемым направлениям (специальностям) минимальный балл ЕГЭ" textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      состава к средней заработной плате по экономике региона" textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     студентов, принятых по результатам ЕГЭ на обучение по очной форме на программы " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     бакалавриата и специалитета." textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
@@ -446,34 +431,290 @@
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      E.8. Дополнительный показатель - Численность сотрудников, из числа профессорско-" textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.5. Численность студентов, победителей и призеров заключительного этапа всероссийской" textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      -преподавательского состава (приведенных к доле ставки), имеющих ученые степени" textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     олимпиады школьников, членов сборных команд Российской Федерации, участвовавших" textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
-                                                <Label prefHeight="30.0" prefWidth="866.0" text="      кандидата или доктора наук, в расчете на 100 студентов" textFill="#e7e5e5">
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     в международных олимпиадах по общеобразовательным предметам по специальностям и (или) " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     направлениям подготовки, соответствующим профилю всероссийской олимпиады школьников " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     или международной олимпиады, принятых на очную форму обучения на первый курс по " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     программам бакалавриата и специалитета без вступительных испытаний" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.6. Численность студентов, победителей и призеров олимпиад школьников, принятых на" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     очную форму обучения на первый курс по программам бакалавриата и специалитета по" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     специальностям и (или) направлениям подготовки, соответствующим профилю" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     олимпиады школьников, без вступительных испытаний" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.7. Численность студентов, принятых по результатам целевого приема на первый курс " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     на очную форму обучения по программам бакалавриата и специалитета" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.8. Удельный вес численности студентов, принятых по результатам целевого приема" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     на первый курс на очную форму обучения по программам бакалавриата и специалитета в" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     общей численности студентов, принятых на первый курс по программам бакалавриата" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     и специалитета на очную форму обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.9. Удельный вес численности студентов (приведенного контингента), обучающихся по " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     программам магистратуры, в общей численности приведенного контингента обучающихся по" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     образовательным программам бакалавриата, специалитета и магистратуры" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.10. Удельный вес численности обучающихся (приведенного контингента), по программам" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     магистратуры, подготовки научно-педагогических кадров в аспирантуре (адъюнктуре)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     ординатуры, ассистентуры-стажировки в общей численности приведенного контингента" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     обучающихся по основным образовательным программам высшего образования" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.11. Удельный вес численности студентов, имеющих диплом бакалавра, специалиста или" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     магистра других организаций, принятых на первый курс на обучение по программам" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     магистратуры образовательной организации, в общей численности студентов," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     принятых на первый курс по программам магистратуры на очную форму обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.12. Удельный вес численности обучающихся по программам магистратуры, подготовки" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     научно-педагогических кадров в аспирантуре (адъюнктуре), ординатуры, ассистентуры-" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     стажировки, имеющих диплом бакалавра, диплом специалиста или диплом магистра" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     других организаций в общей численности обучающихся по программам магистратуры," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     подготовки научно-педагогических кадров в аспирантуре (адъюнктуре), ординатуры, ассистентуры" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     -стажировки" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.13. Численность аспирантов (адъюнктов), ординаторов, ассистентов-стажеров" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     образовательной организации в расчете на 100 студентов (приведенного контингента)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.14. Удельный вес численности слушателей из сторонних организаций в общей" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     численности слушателей, прошедших обучение в образовательной организации по программам" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     повышения квалификации или профессиональной переподготовки" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     п.15. Удельный вес численности студентов, обучающихся по направлениям подготовки" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     бакалавриата, специалитета, и магистратуры по областям знаний «Инженерное дело," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     технологии и технические науки», «Здравоохранение и медицинские науки»," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     «Образование и педагогические науки», с которыми заключены договоры о целевом обучении," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     в общей численности студентов, обучающихся по указанным областям знаний" textFill="#e7e5e5">
                                                    <font>
                                                       <Font size="18.0" />
                                                    </font>
                                                 </Label>
                                              </children>
                                           </VBox>
-                                          <TableView fx:id="table1" layoutX="-1.0" layoutY="809.0" prefHeight="302.0" prefWidth="885.0" style="-fx-background-color: #2a0258;">
+                                          <TableView fx:id="tableEduc_Activ" layoutX="1.0" layoutY="2250.0" prefHeight="73.0" prefWidth="869.0" style="-fx-background-color: #2a0258;">
                                              <columns>
-                                                <TableColumn fx:id="indicator1" prefWidth="51.199981689453125" style="-fx-background-color: b7a5c5;" text="Е№" />
-                                                <TableColumn fx:id="year20181" prefWidth="74.4000244140625" style="-fx-background-color: b7a5c5;" text="2018" />
-                                                <TableColumn fx:id="year20191" prefWidth="74.4000244140625" style="-fx-background-color: b7a5c5;" text="2019" />
-                                                <TableColumn fx:id="year20201" prefWidth="74.4000244140625" style="-fx-background-color: b7a5c5;" text="2020" />
-                                                <TableColumn fx:id="year20211" prefWidth="74.4000244140625" style="-fx-background-color: b7a5c5;" text="2021" />
-                                                <TableColumn fx:id="year20221" prefWidth="74.4000244140625" style="-fx-background-color: b7a5c5;" text="2022" />
-                                                <TableColumn fx:id="medialValueRF1" prefWidth="140.00006103515625" style="-fx-background-color: b7a5c5;" text="Медиан. знач. по РФ" />
-                                                <TableColumn fx:id="medialSubject1" prefWidth="170.40008544921875" style="-fx-background-color: b7a5c5;" text="Медиан. знач. по субъекту" />
-                                                <TableColumn fx:id="medialDepartment1" prefWidth="144.99993896484375" style="-fx-background-color: b7a5c5;" text="Медиан. знач. по ведомственной принадлежности" />
+                                                <TableColumn fx:id="f1" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.1." />
+                                                <TableColumn fx:id="f2" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.2." />
+                                                <TableColumn fx:id="f3" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.3." />
+                                                <TableColumn fx:id="f4" minWidth="9.600006103515625" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.4." />
+                                                <TableColumn fx:id="f5" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.5." />
+                                                <TableColumn fx:id="f6" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.6." />
+                                                <TableColumn fx:id="f7" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.7." />
+                                                <TableColumn fx:id="f8" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.8." />
+                                                <TableColumn fx:id="f9" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.9." />
+                                                <TableColumn fx:id="f10" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.10." />
+                                                <TableColumn fx:id="f11" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.11." />
+                                                <TableColumn fx:id="f12" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.12." />
+                                                <TableColumn fx:id="f13" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.13." />
+                                                <TableColumn fx:id="f14" prefWidth="47.99993896484375" style="-fx-background-color: b7a5c5;" text="п.14." />
+                                                <TableColumn fx:id="f15" prefWidth="56.8001708984375" style="-fx-background-color: b7a5c5;" text="п.15." />
                                              </columns>
                                           </TableView>
                                        </children>

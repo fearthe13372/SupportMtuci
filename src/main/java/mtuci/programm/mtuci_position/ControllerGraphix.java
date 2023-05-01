@@ -11,12 +11,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.sql.*;
+import java.util.ArrayList;
+
+import static mtuci.programm.mtuci_position.DataBase.initMainTable;
 
 public class ControllerGraphix {
     @FXML
     private Button exit;
     @FXML
-    private TableView<Model> table;
+    private TableView<Model> tableEduc_Activ;
+    @FXML
+    private TableView<Model> tablePosition;
     @FXML
     private TableColumn<Model, String> indicator;
     @FXML
@@ -35,17 +40,37 @@ public class ControllerGraphix {
     private TableColumn<Model, Double> medialSubject;
     @FXML
     private TableColumn<Model, Double> medialDepartment;
-
-    // JDBC URL, username and password of MySQL server
-    private static final String url = "jdbc:mysql://localhost:3306/position";
-    private static final String user = "root";
-    private static final String password = "465231";
-
-    // JDBC variables for opening and managing connection
-    private static Connection con;
-    private static Statement stmt;
-    private static ResultSet rs;
-
+    @FXML
+    private TableColumn<Model, Double> f1;
+    @FXML
+    private TableColumn<Model, Double> f2;
+    @FXML
+    private TableColumn<Model, Double> f3;
+    @FXML
+    private TableColumn<Model, Double> f4;
+    @FXML
+    private TableColumn<Model, Double> f5;
+    @FXML
+    private TableColumn<Model, Double> f6;
+    @FXML
+    private TableColumn<Model, Double> f7;
+    @FXML
+    private TableColumn<Model, Double> f8;
+    @FXML
+    private TableColumn<Model, Double> f9;
+    @FXML
+    private TableColumn<Model, Double> f10;
+    @FXML
+    private TableColumn<Model, Double> f11;
+    @FXML
+    private TableColumn<Model, Double> f12;
+    @FXML
+    private TableColumn<Model, Double> f13;
+    @FXML
+    private TableColumn<Model, Double> f14;
+    @FXML
+    private TableColumn<Model, Double> f15;
+    @FXML
     public void initialize() {
         indicator.setCellValueFactory(new PropertyValueFactory<>("indicator"));
         year2018.setCellValueFactory(new PropertyValueFactory<>("year2018"));
@@ -57,42 +82,31 @@ public class ControllerGraphix {
         medialSubject.setCellValueFactory(new PropertyValueFactory<>("medialSubject"));
         medialDepartment.setCellValueFactory(new PropertyValueFactory<>("medialDepartment"));
 
+        ArrayList<Model> modelMains= DataBase.initGraphixPosition();
+        for (Model model: modelMains
+        ) {
+            tablePosition.getItems().add(model);///!!!!!!!!!!!!!
+        }
 
-        // Connect to database and load data into table
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(url, user, password);
-            stmt = con.createStatement();
-            String query ="SELECT t.nameIndicator, t.year2018, t.year2019, t.year2020, t.year2021, t.year2022, t.medialValueRF, t.medialSubject, t.medialDepartment FROM glossary g JOIN table_e1 t ON g.idglossary = t.idTable_E WHERE g.idglossary = 3 UNION SELECT t.nameIndicator, t.year2018, t.year2019, t.year2020, t.year2021, t.year2022, t.medialValueRF, t.medialSubject, t.medialDepartment FROM glossary g JOIN table_e2 t ON g.idglossary = t.idTable_E WHERE g.idglossary = 3 UNION SELECT t.nameIndicator, t.year2018, t.year2019, t.year2020, t.year2021, t.year2022, t.medialValueRF, t.medialSubject, t.medialDepartment FROM glossary g JOIN table_e3 t ON g.idglossary = t.idTable_E WHERE g.idglossary = 3 UNION SELECT t.nameIndicator, t.year2018, t.year2019, t.year2020, t.year2021, t.year2022, t.medialValueRF, t.medialSubject, t.medialDepartment FROM glossary g JOIN table_e4 t ON g.idglossary = t.idTable_E WHERE g.idglossary = 3 UNION SELECT t.nameIndicator, t.year2018, t.year2019, t.year2020, t.year2021, t.year2022, t.medialValueRF, t.medialSubject, t.medialDepartment FROM glossary g JOIN table_e5 t ON g.idglossary = t.idTable_E WHERE g.idglossary = 3 UNION SELECT table_e8.nameIndicator, table_e8.year2018, table_e8.year2019, table_e8.year2020, table_e8.year2021, table_e8.year2022, table_e8.medialValueRF, table_e8.medialSubject, table_e8.medialDepartment FROM glossary g JOIN table_e8  ON g.idglossary = table_e8.idTable_E WHERE g.idglossary = 3;";
-            rs = stmt.executeQuery(query);
-
-            while (rs.next()) {
-
-                ModelTablePosition model = new ModelTablePosition(
-                        rs.getString("nameIndicator"),
-                        rs.getString("year2018"),
-                        rs.getString("year2019"),
-                        rs.getString("year2020"),
-                        rs.getString("year2021"),
-                        rs.getString("year2022"),
-                        rs.getString("medialValueRF"),
-                        rs.getString("medialSubject"),
-                        rs.getString("medialDepartment")
-                );
-                table.getItems().add(model);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (con != null) {
-                    con.close();
-                    stmt.close();
-                    rs.close();
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        f1.setCellValueFactory(new PropertyValueFactory<>("f1"));
+        f2.setCellValueFactory(new PropertyValueFactory<>("f2"));
+        f3.setCellValueFactory(new PropertyValueFactory<>("f3"));
+        f4.setCellValueFactory(new PropertyValueFactory<>("f4"));
+        f5.setCellValueFactory(new PropertyValueFactory<>("f5"));
+        f6.setCellValueFactory(new PropertyValueFactory<>("f6"));
+        f7.setCellValueFactory(new PropertyValueFactory<>("f7"));
+        f8.setCellValueFactory(new PropertyValueFactory<>("f8"));
+        f9.setCellValueFactory(new PropertyValueFactory<>("f9"));
+        f10.setCellValueFactory(new PropertyValueFactory<>("f10"));
+        f11.setCellValueFactory(new PropertyValueFactory<>("f11"));
+        f12.setCellValueFactory(new PropertyValueFactory<>("f12"));
+        f13.setCellValueFactory(new PropertyValueFactory<>("f13"));
+        f14.setCellValueFactory(new PropertyValueFactory<>("f14"));
+        f15.setCellValueFactory(new PropertyValueFactory<>("f15"));
+        modelMains= DataBase.initGraphixEducActiv();
+        for (Model model: modelMains
+        ) {
+            tableEduc_Activ.getItems().add(model);///!!!!!!!!!!!!!
         }
     }
     @FXML

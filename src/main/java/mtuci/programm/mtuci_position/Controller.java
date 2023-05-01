@@ -10,6 +10,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.sql.*;
+import java.util.ArrayList;
+
 
 public class Controller  {
 
@@ -55,52 +57,10 @@ public class Controller  {
             e5.setCellValueFactory(new PropertyValueFactory<>("E5"));
             e8.setCellValueFactory(new PropertyValueFactory<>("E8"));
 
-
-            // Connect to database and load data into table
-            try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection(url, user, password);
-                stmt = con.createStatement();
-                String query =
-                        "SELECT glossary.sname AS name, " +
-                        "       table_e1.year2022 AS e1, " +
-                        "       table_e2.year2022 AS e2, " +
-                        "       table_e3.year2022 AS e3, " +
-                        "       table_e4.year2022 AS e4, " +
-                        "       table_e5.year2022 AS e5, " +
-                        "       table_e8.year2022 AS e8 " +
-                        "FROM glossary " +
-                        "INNER JOIN table_e1 ON glossary.idglossary = table_e1.idTable_E " +
-                        "INNER JOIN table_e2 ON glossary.idglossary = table_e2.idTable_E " +
-                        "INNER JOIN table_e3 ON glossary.idglossary = table_e3.idTable_E " +
-                        "INNER JOIN table_e4 ON glossary.idglossary = table_e4.idTable_E " +
-                        "INNER JOIN table_e5 ON glossary.idglossary = table_e5.idTable_E " +
-                        "INNER JOIN table_e8 ON glossary.idglossary = table_e8.idTable_E ;";
-                rs = stmt.executeQuery(query);
-                int i=1;
-                while (rs.next()) {
-                    Model model = new Model(i,
-                            rs.getString("name"),
-                            rs.getString("e1"),
-                            rs.getString("e2"),
-                            rs.getString("e3"),
-                            rs.getString("e4"),
-                            rs.getString("e5"),
-                            rs.getString("e8")
-                    );
-                    i++;
-                    table.getItems().add(model);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if(con!=null){ con.close();
-                        stmt.close();
-                        rs.close();}
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+            ArrayList<Model> modelMains= DataBase.initMainTable();
+            for (Model model: modelMains
+                 ) {
+                table.getItems().add(model);///!!!!!!!!!!!!!
             }
 
 
@@ -142,7 +102,8 @@ public class Controller  {
             newStage.setScene(new Scene(root));
             newStage.show();
         }catch (Exception e ){
-            System.out.printf(String.valueOf(e));
+            //System.out.printf(String.valueOf(e));
+            //e.printStackTrace();
         }
 
     }
