@@ -1,0 +1,2426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="767.0" prefWidth="1173.0" style="-fx-background-color: #2a0258;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mtuci.programm.mtuci_position.ControllerGraphixImprove">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/mtuci_logo21-transformed.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin></ImageView>
+            <Label text="МТУСИ">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="topUnivers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchToTopUniverse" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Топ вузов">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="graphix1" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Графики">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/icons8-graph-32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="graphix" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchToGraphix" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Статистика МТУСИ">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchToAddInfo" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Статистика по входным данным">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="exit" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#setExit" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Выход">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="258.0" prefHeight="751.0" prefWidth="898.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane prefHeight="1028.0" prefWidth="898.0" style="-fx-background-color: #2a0258;">
+               <children>
+                  <Label layoutX="57.0" layoutY="25.0" text="Системма поддержки позиционирования МТУСИ" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="111.0" prefWidth="878.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="111.0" prefWidth="265.0">
+                           <children>
+                              <Label text="Е1" textFill="#2a73ff">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="18.0" prefWidth="128.0" text="Образовательная" textAlignment="CENTER" textFill="#e7e5e5" />
+                              <Label prefHeight="18.0" prefWidth="77.0" text="деятельность" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="111.0" prefWidth="255.0">
+                           <children>
+                              <Label text="Е2" textFill="#26bfbc">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="18.0" prefWidth="91.0" text="Научно-исследовательская" textFill="#e7e5e5" />
+                              <Label prefHeight="18.0" prefWidth="74.0" text="деятельность" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="111.0" prefWidth="276.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="30.0" text="Е3" textFill="#fa5f7e">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Международная" textFill="#e7e5e5" />
+                              <Label text="деятельность" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="111.0" prefWidth="286.0">
+                           <children>
+                              <Label text="Е4" textFill="#de0000">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Финансово-экономическая" textFill="#e7e5e5" />
+                              <Label text="деятельность" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="111.0" prefWidth="280.0">
+                           <children>
+                              <Label text="Е5" textFill="#f52bff">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="18.0" prefWidth="100.0" text="Заработная плата" textAlignment="CENTER" textFill="#e7e5e5" />
+                              <Label text="ППС" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="111.0" prefWidth="275.0">
+                           <children>
+                              <Label text="Е8" textFill="#c6ff2b">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="18.0" prefWidth="97.0" text="Дополнительный" textAlignment="CENTER" textFill="#e7e5e5" />
+                              <Label text="показатель" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <TabPane layoutX="15.0" layoutY="192.0" prefHeight="543.0" prefWidth="869.0" style="-fx-background-color: #2a0258;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Научно-исследовательская деят.">
+                           <content>
+                              <ScrollPane prefHeight="1619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                                 <content>
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                       <children>
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Научно-исследовательская деятельность" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Нажмите на кнопки для построения графиков:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane prefHeight="149.0" prefWidth="866.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <Button fx:id="r1" mnemonicParsing="false" onAction="#drawing_graph_r1" prefWidth="286.0" text="п.1." GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r2" prefWidth="286.0" text="п.2." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r3" prefWidth="286.0" text="п.3." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r4" prefWidth="286.0" text="п.4." GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r5" prefWidth="286.0" text="п.5." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r6" prefWidth="286.0" text="п.6." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r7" prefWidth="286.0" text="п.7." GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r8" prefWidth="286.0" text="п.8." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r9" prefWidth="286.0" text="п.9." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_r10" prefWidth="286.0" text="п.10." GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Описание параметров:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.1. Количество цитирований публикаций, изданных за последние 5 лет, индексируемых " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      в Российском индексе научного цитирования (далее - РИНЦ) в расчете на 100НПР[н]" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2. Число публикаций организации, индексируемых в информационно-аналитической системе " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      научного цитирования РИНЦ, в расчете на 100 НПР[н]" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3. Удельный вес доходов от НИОКР в общих доходах образовательной организации" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.4. Общий объем научно-исследовательских и опытно-конструкторских работ (далее – НИОКР)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.5. Удельный вес НИОКР, выполненных собственными силами (без привлечения соисполнителей)," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      в общих доходах образовательной организации от НИОКР" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.6. Доходы от НИОКР (за исключением средств бюджетов бюджетной системы " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Российской Федерации, государственных фондов поддержки науки) в расчете" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      на одного НПР[н] " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.7. Количество лицензионных соглашений" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.8. Удельный вес средств, полученных образовательной организацией от использования " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      результатов интеллектуальной деятельности, в общих доходах" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      образовательной организации" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.9. Количество научных журналов, в том числе электронных, издаваемых образовательной " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      организацией" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.10. Количество полученных грантов за отчетный год в расчете на 100 НПР[н]" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Образовательная деят.">
+                           <content>
+                              <ScrollPane prefHeight="1619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                                 <content>
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                       <children>
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Образовательная деятельность" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Нажмите на кнопки для построения графиков:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane prefHeight="149.0" prefWidth="866.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E1" prefWidth="286.0" text="п.1." GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E2" prefWidth="286.0" text="п.2." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E3" prefWidth="286.0" text="п.3." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E4" prefWidth="286.0" text="п.4." GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E5" prefWidth="286.0" text="п.5." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E6" prefWidth="286.0" text="п.6." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E7" prefWidth="286.0" text="п.7." GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E8" prefWidth="286.0" text="п.8." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E9" prefWidth="286.0" text="п.9." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E10" prefWidth="286.0" text="п.10." GridPane.rowIndex="4" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_E11" prefWidth="286.0" text="п.11." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Описание параметров:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.1.1.Средний балл ЕГЭ студентов, принятых по результатам ЕГЭ на обучение по очной форме " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по программам бакалавриата и специалитета за счет средств соответствующих бюджетов" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бюджетной системы РФ" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2.Средний балл ЕГЭ студентов университета, принятых по результатам ЕГЭ на обучение по очной" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      форме по программам бакалавриата и специалитета за счет средств соответствующих " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бюджетов бюджетной системы Российской Федерации, за исключением лиц," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      поступивших с учетом особых прав и в рамках квоты целевого приема" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3.Средний балл ЕГЭ студентов, принятых по результатам ЕГЭ на обучение по очной " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      форме по программам бакалавриата и специалитета с оплатой стоимости затрат на обучение " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      физическими и юридическими лицами" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.4.Численность студентов, принятых по результатам целевого приема на первый курс на очную" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      форму обучения по программам бакалавриата и специалитета" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.5.Удельный вес численности студентов, обучающихся по направлениям подготовки " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бакалавриата, специалитета, и магистратуры по областям знаний «Инженерное дело, технологии" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      и технические науки», «Здравоохранение и медицинские науки», " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      «Образование и педагогические науки»,с которыми заключены договоры о целевом " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      обучении, в общей численности студентов, обучающихся по указанным областям знаний" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.6.Общая численность студентов, обучающихся по программам бакалавриата, специалитета, " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      магистратуры в том числе: " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.7.по очной форме обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.8.по очно-заочной (вечерней) форме обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.9.по заочной форме обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.10.Доля обучающихся по программам бакалавриата в общей численности обучающихся " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по программам бакалавриата,  специалитета,магистратуры" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.11. Доля обучающихся по программам магистратуры в общей численности обучающихся" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по программам бакалавриата,  специалитета,магистратуры" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Международная деят.">
+                           <content>
+                              <ScrollPane prefHeight="1619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                                 <content>
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                       <children>
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Международная деятельность" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Нажмите на кнопки для построения графиков:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane prefHeight="266.0" prefWidth="866.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I1" prefWidth="286.0" text="п.1." GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I2" prefWidth="286.0" text="п.2." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I3" prefWidth="286.0" text="п.3." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I4" prefWidth="286.0" text="п.4." GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I5" prefWidth="286.0" text="п.5." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I6" prefWidth="286.0" text="п.6." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I7" prefWidth="286.0" text="п.7." GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I8" prefWidth="286.0" text="п.8." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I9" prefWidth="286.0" text="п.9." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I10" prefWidth="286.0" text="п.10." GridPane.rowIndex="4" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I11" prefWidth="286.0" text="п.11." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I12" prefWidth="286.0" text="п.12." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I13" prefWidth="286.0" text="п.13." GridPane.rowIndex="5" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I14" prefWidth="286.0" text="п.14." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I15" prefWidth="286.0" text="п.15." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I16" prefWidth="286.0" text="п.16." GridPane.rowIndex="6" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_I17" prefWidth="286.0" text="п.17." GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Описание параметров:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.1.Удельный вес численности иностранных студентов (кроме стран Содружества Независимых " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Государств (далее – СНГ)), обучающихся программам бакалавриата, специалитета, магистратуры," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      в общей численности студентов (приведенный контингент)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2.Удельный вес численности иностранных студентов из СНГ, обучающихся по программам " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бакалавриата, специалитета, магистратуры, в общей численности студентов " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      (приведенный контингент)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3.Удельный вес численности иностранных студентов, завершивших освоение образовательных" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      программ бакалавриата, специалитета, магистратуры, в общей численности студентов " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      (приведенный контингент)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.4.Удельный вес численности иностранных студентов (кроме стран СНГ), завершивших освоение" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      образовательных программ бакалавриата, программ специалитета, программ магистратуры," textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      в общей численности студентов (приведенный контингент)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.5.Удельный вес численности студентов, обучающихся по очной форме обучения по " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      образовательным программам бакалавриата, программам специалитета, программам " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      магистратуры, прошедших обучение за рубежом не менее семестра (триместра), в" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      общей численности студентов, обучающихся по очной форме обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.6.Численность студентов иностранных образовательных организаций, прошедших обучение " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      в образовательной организации по образовательным по очной форме обучения по " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      образовательным программам бакалавриата, программам специалитета, программам" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      магистратуры, не менее семестра (триместра) в расчете на 100 студентов, обучающихся " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по очной форме обучения" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.7.Численность зарубежных ведущих профессоров, преподавателей и исследователей, " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      работающих (работавших) в образовательной организации не менее 1 семестра" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.8.Удельный вес численности иностранных граждан (кроме стран СНГ) из числа аспирантов " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      (адъюнктов), ординаторов, ассистентов-стажеров образовательной организации в общей" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      численности аспирантов (адъюнктов), ординаторов, ассистентов-стажеров" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.9.Удельный вес численности иностранных граждан из стран СНГ из числа аспирантов " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      (адъюнктов), ординаторов, ассистентов-стажеров образовательной организации в общей " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      численности аспирантов (адъюнктов), ординаторов, ассистентов-стажеров" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.10.Объем средств от образовательной деятельности, полученных образовательной организацией" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      от иностранных граждан и иностранных юридических лиц" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.11.Общая численность иностранных студентов, обучающихся по программам " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бакалавриата, специалитета, магистратуры " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.12.Доля иностранных студентов в общей численности студентов, обучающихся по программам " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      бакалавриата, специалитета, магистратуры " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.13.Общее число образовательных программ высшего образования, реализуемых совместно с" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      зарубежными вузами и ведущих к получению двух дипломов" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.14.Общая численность обучающихся по очной форме обучения по программам бакалавриата, " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      магистратуры, реализуемым совместно с зарубежными вузами и ведущим к получению" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      двух дипломов" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.15.Число статей, подготовленных совместно с зарубежными организациями" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.16.Доходы вуза из иностранных источников на выполнение НИОКР" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.17.Доходы вуза от образовательной деятельности из иностранных источников" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Финансово-экономическая деят.">
+                           <content>
+                              <ScrollPane prefHeight="1619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                                 <content>
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                       <children>
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Финансово-экономическая деятельность" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Нажмите на кнопки для построения графиков:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane prefHeight="90.0" prefWidth="866.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="69.59998192787171" minHeight="10.0" prefHeight="39.99997487068177" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_F1" prefWidth="286.0" text="п.1." />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_F2" prefWidth="286.0" text="п.2." GridPane.columnIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_F3" prefWidth="286.0" text="п.3." GridPane.columnIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_F4" prefWidth="286.0" text="п.4." GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_F5" prefWidth="286.0" text="п.5." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Описание параметров:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.1.Доходы вуза из всех источников" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2.Доля доходов вуза из внебюджетных источников" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3.Доля доходов вуза из федерального бюджета" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.4.Доля доходов вуза из бюджета субъекта РФ и местного бюджета" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.5.Доля доходов вуза от образовательной деятельности в общих доходах вуза" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Инфраструктура">
+                           <content>
+                              <ScrollPane prefHeight="1619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                                 <content>
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                       <children>
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Инфраструктура" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Нажмите на кнопки для построения графиков:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane prefHeight="118.0" prefWidth="866.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf1" prefWidth="286.0" text="п.1." GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf2" prefWidth="286.0" text="п.2." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf3" prefWidth="286.0" text="п.3." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf4" prefWidth="286.0" text="п.4." GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf5" prefWidth="286.0" text="п.5." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf6" prefWidth="286.0" text="п.6." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf7" prefWidth="286.0" text="п.7." GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_Inf8" prefWidth="286.0" text="п.8." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Описание параметров:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.1.Общая площадь учебно-лабораторных помещений в расчете на одного студента " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      (приведенного контингента)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2.Количество персональных компьютеров в расчете на одного студента (приведенного контингента)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3.Удельный вес стоимости машин и оборудования (не старше 5 лет) в общей стоимости машин " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      и оборудования" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.4.Количество экземпляров печатных учебных изданий (включая учебники и учебные пособия)  " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      из общего количества единиц хранения библиотечного фонда, состоящих на учете, в расчете " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      на одного студента (приведенного контингента) " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.5.Площадь учебно-лабораторных зданий " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.6.Площадь, предназначенная для научно-исследовательских подразделений  " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.7.Площадь общежитий " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.8.Доля студентов, не обеспеченных собственным общежитием, в числе студентов, нуждающихся" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      в общежитии  " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Кадровый состав">
+                           <content>
+                              <ScrollPane prefHeight="1619.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                                 <content>
+                                    <Pane layoutX="14.0" layoutY="214.0" prefHeight="2331.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" styleClass="..\..\..\style.css">
+                                       <children>
+                                          <VBox prefHeight="2230.0" prefWidth="865.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="68.0" prefWidth="870.0" text="Кадровый состав" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Нажмите на кнопки для построения графиков:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <GridPane prefHeight="149.0" prefWidth="866.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P1" prefWidth="286.0" text="п.1." GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P2" prefWidth="286.0" text="п.2." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P3" prefWidth="286.0" text="п.3." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P4" prefWidth="286.0" text="п.4." GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P5" prefWidth="286.0" text="п.5." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P6" prefWidth="286.0" text="п.6." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P7" prefWidth="286.0" text="п.7." GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P8" prefWidth="286.0" text="п.8." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Button mnemonicParsing="false" onAction="#drawing_graph_P9" prefWidth="286.0" text="п.9." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      Описание параметров:" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.1.Удельный вес НПР, имеющих ученую степень кандидата наук, в общей численности НПР " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.2.Удельный вес НПР имеющих ученую степень доктора наук, в общей численности НПР" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.3.Удельный вес НПР, имеющих ученую степень кандидата и доктора наук, в общей численности " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      НПР образовательной организации (без совместителей и работающих по договорам " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      гражданско-правового характера)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.4.Число НПР, имеющих ученую степень кандидата и доктора наук, в расчете на 100 студентов" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.5.Доля штатных работников ППС в общей численности ППС " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.6.Общая численность ППС (без внешних совместителей и работающих по договорам ГПХ) " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.7.Общая численность научных работников (без внешних совместителей и работающих по " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      договорам ГПХ) " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.8.Средняя заработная плата ППС (без внешних совместителей и работающих по договорам ГПХ)" textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      п.9.Средняя заработная плата научных работников (без внешних совместителей и работающих " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      по договорам ГПХ) " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="     " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="30.0" prefWidth="866.0" text="      " textFill="#e7e5e5">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

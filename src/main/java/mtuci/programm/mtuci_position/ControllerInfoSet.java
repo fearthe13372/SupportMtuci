@@ -9,12 +9,13 @@ import javafx.scene.control.*;
 
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import mtuci.programm.mtuci_position.Model.Model;
+import mtuci.programm.mtuci_position.Model.ModelMain;
 
-import java.sql.*;
 import java.util.ArrayList;
 
 
-public class ControllerInfoSet  {
+    public class ControllerInfoSet  {
         @FXML
         private TextField E1field;
         @FXML
@@ -175,6 +176,23 @@ public class ControllerInfoSet  {
             newStage.setScene(new Scene(root));
             newStage.show();
         }catch (Exception e ){}
+
+    }
+    public void switchToGraphixImprove()  {
+        Stage stage = (Stage) exit.getScene().getWindow(); // получаем Stage текущего окна
+        stage.close(); // закрываем текущее окно
+
+        // Загрузка FXML и открытие нового окна
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphixImprove.fxml"));
+        try {
+            Parent root = loader.load();
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+            newStage.show();
+        }catch (Exception e ){
+            //System.out.printf(String.valueOf(e));
+            //e.printStackTrace();
+        }
 
     }
 }

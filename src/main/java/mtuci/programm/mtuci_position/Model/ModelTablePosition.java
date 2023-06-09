@@ -1,4 +1,4 @@
-package mtuci.programm.mtuci_position;
+package mtuci.programm.mtuci_position.Model;
 
 public class ModelTablePosition extends Model{
     private final String indicator;

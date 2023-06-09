@@ -9,9 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Application extends javafx.application.Application {
-   // @FXML
-    //private ListView<String> succsessView;
-    //private ObservableList<String> succsessList =FXCollections.observableArrayList("test");
+
     @Override
     public void start(Stage stage) throws IOException {
 
@@ -24,12 +22,15 @@ public class Application extends javafx.application.Application {
         Image image = new Image(iconStream);
 
 
-       // succsessView.setItems(succsessList);
         stage.getIcons().add(image);
         stage.setScene(scene);
-        stage.setWidth(1170);
+        stage.setWidth(1270);
         stage.setHeight(642);
         stage.show();
+
+    }
+    public static void main(String[] args) {
+        launch();
 
     }
     public void exit(){
@@ -40,8 +41,5 @@ public class Application extends javafx.application.Application {
         }
     }
 
-    public static void main(String[] args) {
-        launch();
 
-    }
 }

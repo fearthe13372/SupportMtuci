@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Motivation_Project">
+    <output-path>$PROJECT_DIR$/out/artifacts/Motivation_Project</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.example.motivation_project.Application" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Motivation_Project.jar">
+        <element id="module-output" name="Mtuci_Position_sup" />
+      </element>
+    </root>
+  </artifact>
+</component>

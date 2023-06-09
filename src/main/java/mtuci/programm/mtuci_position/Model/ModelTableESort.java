@@ -1,6 +1,6 @@
-package mtuci.programm.mtuci_position;
+package mtuci.programm.mtuci_position.Model;
 
-public class ModelMain extends Model{
+public class ModelTableESort extends Model{
 
     private final String name;
     private final Double e1;
@@ -9,11 +9,15 @@ public class ModelMain extends Model{
     private final Double e4;
     private final Double e5;
     private final Double e8;
+    private final Double e_subject;
+
     //private final String count;
 
 
+
+
     private int number;
-    public ModelMain(Integer number,String name, String e1, String e2, String e3, String e4, String e5, String e8) {
+    public ModelTableESort(Integer number, String name, String e1, String e2, String e3, String e4, String e5, String e8, Double eSubject) {
 
         this.number=number;
         this.name = name;
@@ -23,13 +27,15 @@ public class ModelMain extends Model{
         this.e4 = Double.parseDouble(e4.replace(',','.'));
         this.e5 = Double.parseDouble(e5.replace(',','.'));
         this.e8 = Double.parseDouble(e8.replace(',','.'));
+        //this.e_subject = this.e1/buf;
+        this.e_subject=eSubject;
+
     }
+
+
 
     public String getName() {
         return name;
-    }
-    public Integer getNumber() {
-        return number;
     }
 
     public Double getE1() {
@@ -54,5 +60,17 @@ public class ModelMain extends Model{
 
     public Double getE8() {
         return e8;
+    }
+
+    public Double getE_subject() {
+        return e_subject;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }

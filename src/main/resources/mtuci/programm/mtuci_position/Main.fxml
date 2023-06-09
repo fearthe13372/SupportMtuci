@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1156.0" style="-fx-background-color: #2a0258;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mtuci.programm.mtuci_position.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1243.0" style="-fx-background-color: #2a0258;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mtuci.programm.mtuci_position.Controller">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -50,7 +50,19 @@
                   <Insets left="50.0" />
                </padding>
             </Button>
-            <Button fx:id="graphix" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchToGraphix" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Статистика МТУСИ 2022">
+            <Button fx:id="graphix1" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchToGraphixImprove" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Графики">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../icons/icons8-graph-32.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="graphix" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#switchToGraphix" prefHeight="42.0" prefWidth="259.0" style="-fx-background-color: #ffffff;" text="Статистика МТУСИ">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -88,7 +100,7 @@
             </Button>
          </children>
       </VBox>
-      <StackPane layoutX="258.0" prefHeight="608.0" prefWidth="897.0" style="-fx-background-color: #02030A;">
+      <StackPane layoutX="258.0" prefHeight="608.0" prefWidth="985.0" style="-fx-background-color: #02030A;">
          <children>
             <Pane prefHeight="605.0" prefWidth="894.0" style="-fx-background-color: #2a0258;">
                <children>
@@ -97,7 +109,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="111.0" prefWidth="878.0" spacing="50.0">
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="72.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="111.0" prefWidth="961.0" spacing="50.0">
                      <children>
                         <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="111.0" prefWidth="265.0">
                            <children>
@@ -108,6 +120,7 @@
                               </Label>
                               <Label prefHeight="18.0" prefWidth="128.0" text="Образовательная" textAlignment="CENTER" textFill="#e7e5e5" />
                               <Label prefHeight="18.0" prefWidth="77.0" text="деятельность" textFill="#e7e5e5" />
+                              <Button mnemonicParsing="false" onAction="#sortE1" prefHeight="22.0" prefWidth="101.0" text="Сортировка" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="111.0" prefWidth="255.0">
@@ -119,6 +132,7 @@
                               </Label>
                               <Label prefHeight="18.0" prefWidth="151.0" text="Научно-исследовательская" textFill="#e7e5e5" />
                               <Label prefHeight="18.0" prefWidth="74.0" text="деятельность" textFill="#e7e5e5" />
+                              <Button mnemonicParsing="false" onAction="#sortE2" prefHeight="22.0" prefWidth="101.0" text="Сортировка" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="111.0" prefWidth="276.0">
@@ -130,6 +144,7 @@
                               </Label>
                               <Label text="Международная" textFill="#e7e5e5" />
                               <Label text="деятельность" textFill="#e7e5e5" />
+                              <Button mnemonicParsing="false" onAction="#sortE3" prefHeight="22.0" prefWidth="101.0" text="Сортировка" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="111.0" prefWidth="286.0">
@@ -141,6 +156,7 @@
                               </Label>
                               <Label text="Финансово-экономическая" textFill="#e7e5e5" />
                               <Label text="деятельность" textFill="#e7e5e5" />
+                              <Button mnemonicParsing="false" onAction="#sortE4" prefHeight="22.0" prefWidth="101.0" text="Сортировка" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="111.0" prefWidth="280.0">
@@ -152,6 +168,7 @@
                               </Label>
                               <Label prefHeight="18.0" prefWidth="100.0" text="Заработная плата" textAlignment="CENTER" textFill="#e7e5e5" />
                               <Label text="ППС" textFill="#e7e5e5" />
+                              <Button mnemonicParsing="false" onAction="#sortE5" prefHeight="22.0" prefWidth="101.0" text="Сортировка" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="111.0" prefWidth="275.0">
@@ -163,22 +180,24 @@
                               </Label>
                               <Label prefHeight="18.0" prefWidth="97.0" text="Дополнительный" textAlignment="CENTER" textFill="#e7e5e5" />
                               <Label text="показатель" textFill="#e7e5e5" />
+                              <Button mnemonicParsing="false" onAction="#sortE8" prefHeight="22.0" prefWidth="101.0" text="Сортировка" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
-                  <ScrollPane layoutX="14.0" layoutY="214.0" prefHeight="385.0" prefWidth="870.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                  <ScrollPane layoutX="14.0" layoutY="214.0" prefHeight="385.0" prefWidth="949.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
                      <content>
-                        <TableView fx:id="table" prefHeight="382.0" prefWidth="869.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
+                        <TableView fx:id="table" prefHeight="382.0" prefWidth="954.0" style="-fx-background-color: #2a0258;" stylesheets="@../../../style.css">
                           <columns>
-                              <TableColumn fx:id="number" minWidth="0.0" prefWidth="36.79998856782913" style="-fx-background-color: b7a5c5;" text="№" />
-                            <TableColumn fx:id="name" prefWidth="469.60004806518555" style="-fx-background-color: b7a5c5;" text="Наименование ВУЗа" />
-                            <TableColumn fx:id="e1" minWidth="0.0" prefWidth="68.00006103515625" style="-fx-background-color: b7a5c5;" text="Е1" />
-                              <TableColumn fx:id="e2" minWidth="7.20001220703125" prefWidth="60.800048828125" style="-fx-background-color: b7a5c5;" text="Е2" />
-                              <TableColumn fx:id="e3" minWidth="7.20001220703125" prefWidth="62.39996337890625" style="-fx-background-color: b7a5c5;" text="Е3" />
-                              <TableColumn fx:id="e4" minWidth="0.0" prefWidth="55.20013427734375" style="-fx-background-color: b7a5c5;" text="Е4" />
-                              <TableColumn fx:id="e5" minWidth="7.20001220703125" prefWidth="52.0001220703125" style="-fx-background-color: b7a5c5;" text="Е5" />
-                              <TableColumn fx:id="e8" minWidth="7.20001220703125" prefWidth="49.599853515625" style="-fx-background-color: b7a5c5;" text="Е8" />
+                              <TableColumn fx:id="e_subject" minWidth="0.0" prefWidth="68.80004578828812" style="-fx-background-color: b7a5c5;" text="№" />
+                              <TableColumn fx:id="number" minWidth="0.0" prefWidth="40.79998779296875" style="-fx-background-color: b7a5c5;" text="№" />
+                            <TableColumn fx:id="name" prefWidth="503.19996643066406" style="-fx-background-color: b7a5c5;" text="Наименование ВУЗа" />
+                            <TableColumn fx:id="e1" minWidth="0.0" prefWidth="61.60003662109375" style="-fx-background-color: b7a5c5;" text="Е1" />
+                              <TableColumn fx:id="e2" minWidth="7.20001220703125" prefWidth="57.60003662109375" style="-fx-background-color: b7a5c5;" text="Е2" />
+                              <TableColumn fx:id="e3" minWidth="7.20001220703125" prefWidth="56.79998779296875" style="-fx-background-color: b7a5c5;" text="Е3" />
+                              <TableColumn fx:id="e4" minWidth="0.0" prefWidth="48.800048828125" style="-fx-background-color: b7a5c5;" text="Е4" />
+                              <TableColumn fx:id="e5" minWidth="7.20001220703125" prefWidth="51.199951171875" style="-fx-background-color: b7a5c5;" text="Е5" />
+                              <TableColumn fx:id="e8" minWidth="7.20001220703125" prefWidth="45.5999755859375" style="-fx-background-color: b7a5c5;" text="Е8" />
                           </columns>
                         </TableView>
                      </content>
